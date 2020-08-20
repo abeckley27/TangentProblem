@@ -27,22 +27,23 @@ def f(n):
 
 
 t0 = time.time()
-N = 15000000
+N = 20000000
 x = 0
 errmin = 1.0
 xmin = -1
 flag = True
 
 while (x < N):
-    ans = f(x)
     errx = err(x)
-    if (np.tan(ans) > ans):
-        print(ans)
-        if (errx < errmin):
-            errmin = errx
-            xmin = x
-    elif (errx < 0.005):
-        x += 100
+    if (errx < 0.01):
+        ans = f(x)
+        if (np.tan(ans) > ans):
+            print(ans)
+            if (errx < errmin):
+                errmin = errx
+                xmin = x
+        elif (errx < 0.005):
+            x += 100
     x += 1
 
 print("------------------")
