@@ -27,7 +27,7 @@ def f(n):
 
 
 t0 = time.time()
-N = 20000000
+N = 10000000
 x = 0
 errmin = 1.0
 xmin = -1
@@ -49,9 +49,9 @@ while (x < N):
 print("------------------")
 print(N)
 print(xmin)
-poop = int((xmin + 0.5) * np.pi)
-print(poop)
-print(np.tan(poop))
+y = int((xmin + 0.5) * np.pi)
+print(y)
+print(np.tan(y))
 print("------------------")
 print("Time: %.2f s" %(time.time() - t0))
 
