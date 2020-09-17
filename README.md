@@ -1,2 +1,2 @@
 # TangentProblem
-Looking at integer values n for which tan(n) > n
+This progtram searches for integer values n for which tan(n) > n
