@@ -7,21 +7,19 @@ Created on Thu Aug 20 01:28:30 2020
 """
 
 import numpy as np
-import primes
 from matplotlib import pyplot as plt
 import time
-import numba
 
 #x = np.linspace(0, 2*np.pi, 100)
 #y = np.tan(x)
 #plt.plot(x,y)
 
-@numba.jit()
+
 def err(n):
     x = (n+0.5)*np.pi
     return x - int(x)
 
-@numba.jit()
+
 def f(n):
     return int(np.pi * (n + 0.5))
 
@@ -47,11 +45,11 @@ while (x < N):
     x += 1
 
 print("------------------")
-print(N)
-print(xmin)
+print("upper bound:", N)
+print("smallest value:", xmin)
 y = int((xmin + 0.5) * np.pi)
-print(y)
-print(np.tan(y))
+print("y:", y)
+print("tan(y):", np.tan(y))
 print("------------------")
 print("Time: %.2f s" %(time.time() - t0))
 
